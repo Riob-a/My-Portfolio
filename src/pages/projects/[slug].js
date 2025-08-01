@@ -31,7 +31,7 @@ export default function ProjectDetail() {
     if (!project) return <div className="p-8">Project not found or loading...</div>;
 
     return (
-        <div className={`slug project-car p-8 mt-8 mb-8 max-w-5xl mx-auto  ${animationClass}`}>
+        <div className={`slug p-8 mt-8 mb-8 max-w-5xl mx-auto  ${animationClass}`}>
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">/.{project.title}</h1>
                 <button

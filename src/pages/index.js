@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Navbar />
       <section>
-        <header className="header relative text-center">
+        <header className="header relative text-center" data-aos="fade-in" >
           {/* <h1 className="text" data-aos="fade-in" data-aos-delay="800">[Portfolio.]</h1> */}
           <motion.h1
             className="text-8xl font-bold flex justify-center gap-1"
@@ -46,7 +46,7 @@ export default function Home() {
         </header>
       </section>
 
-      <section className="p-8 mb-4">
+      <section className="p-8 mb-8">
         <div className=" main-index flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4" data-aos="fade-in">
           <div>
             <h1 className="text-2xl font-bold mb-1" data-aos="fade-up">
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <motion.div
             whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 10 }}
           >
             <Link
               href="/projects"

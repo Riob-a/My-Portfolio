@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <div>
       <Navbar />
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+      <div className="p-6 mb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
         {projects.map((project, i) => (
           <ProjectCard
             key={i}
