@@ -12,7 +12,7 @@ export default function ProjectCard({ title, imageUrl, description, slug, aosDel
             >
                 <div
                     className="project-card overflow-hidden"
-                    data-aos="fade-up"
+                    data-aos="fade-in"
                     data-aos-delay={aosDelay}
                 >
                     <Image
