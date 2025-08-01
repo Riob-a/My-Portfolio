@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Hamburger Icon */}
       <div className="md:hidden hamburger">
-        <button onClick={toggleMenu} className="text-2xl">
+        <button onClick={toggleMenu} className="text-2xl h-button">
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
