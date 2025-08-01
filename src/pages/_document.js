@@ -15,8 +15,9 @@ export default function Document() {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        {/* <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&family=Jacquard+12&family=Jacquard+24&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pirata+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet" /> */}
         <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&family=Jacquard+12&family=Jacquard+24&family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pirata+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
         <meta name="description" content="Art portfolio" />
       </Head>
 
