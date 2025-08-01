@@ -14,7 +14,7 @@ export default function About() {
         </p>
         <br />
         <p>
-          If you made it this far, I'm also an artist and have a background in art and design, particularly in technical drawing.
+          If you made it this far, I am also an artist and have a background in art and design, particularly in technical drawing.
           Hope you enjoy my work, and feel free to reach out and check out my art projects.
         </p>
         <p>

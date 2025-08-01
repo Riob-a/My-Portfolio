@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import projects from '../../data/projects';
 import { FaLink, FaWindowClose } from "react-icons/fa";
@@ -44,9 +45,11 @@ export default function ProjectDetail() {
                 </button>
             </div>
 
-            <img
+            <Image
                 src={project.imageUrl}
                 alt={project.title}
+                width={600}
+                height={300}
                 className="slug-image w-full mb-6"
             />
             <br />
