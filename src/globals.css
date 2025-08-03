@@ -459,7 +459,7 @@ body hr {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .header h1 {
@@ -530,7 +530,7 @@ body hr {
   border: 1px solid transparent;
   font-family: 'Technor', sans-serif;
   font-weight: 500;
-  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
   color: #44434384;
   border: 2px solid transparent;
   box-shadow: transparent;
@@ -547,7 +547,7 @@ body hr {
   transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 2s ease;
   color: #040404;
   border: 2px solid #171717;
-  /* box-shadow: #7e7e7e 1px 1px 10px; */
+  box-shadow: #7e7e7e 1px 10px 10px;
 
 }
 
@@ -591,13 +591,13 @@ body hr {
 .footer {
   color: #44434384;
   border: 2px solid transparent;
-  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 2s ease;
 }
 
 .footer:hover {
   color: #070707;
-  transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 1s ease;
   border: 2px solid #070707;
-  box-shadow: #7e7e7e 10px 10px 10px;
+  box-shadow: #7e7e7e 1px 10px 10px;
 
 }

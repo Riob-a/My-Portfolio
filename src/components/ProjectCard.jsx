@@ -7,12 +7,13 @@ export default function ProjectCard({ title, imageUrl, description, slug, aosDel
         <Link href={`/projects/${slug}`}>
             <motion.div
                 whileHover={{ scale: 1.05, y: -10 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+                whileTap={{ scale: 0.95, y: 2 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                 className="block cursor-pointer"
             >
                 <div
                     className="project-card overflow-hidden"
-                    data-aos="fade-in"
+                    data-aos="fade-up"
                     data-aos-delay={aosDelay}
                 >
                     <Image
