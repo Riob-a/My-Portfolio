@@ -1,4 +1,3 @@
-// src/pages/projects.js
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';

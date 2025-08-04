@@ -6,12 +6,53 @@
   --foreground: #171717;
 }
 
+.dark-mode {
+  --bg-color: #171717;
+  --text-color: #ffffff;
+}
+
+/* theme toggle */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 50%;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* end */
+
+/* gsap */
+@supports (clip-path: circle(50% at 50% 50%)) {
+  .clip-animated {
+    transition: clip-path 0.4s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .swing-hover {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  .swing-hover:hover {
+    transform: rotate(3deg) skewX(5deg);
+  }
+}
+
+/* end */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -182,9 +223,9 @@ main {
 /* end */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  /* font-family: Arial, Helvetica, sans-serif; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s;
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -213,8 +254,23 @@ body hr {
 
 }
 
+.dark-mode .header {
+  /* background: linear-gradient(120deg, #8E706A, #755B6B, #0F3A90, #008888); */
+  background-size: 200% 200%;
+  animation: gradientWave 20s ease infinite;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid #343434;
+  /* box-shadow: transparent 10px 10px 10px; */
+  box-shadow: #000000 10px 10px 10px;
+
+
+  h1 {
+    color: #008888
+  }
+}
+
 .header h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: 'Panchang', sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -237,6 +293,16 @@ body hr {
   offset: 15px;
   border: 2px solid #171717;
   box-shadow: #7e7e7e 10px 10px 10px;
+
+}
+
+.dark-mode .main-index {
+  padding: 20px;
+  offset: 15px;
+  border: 2px solid #343434;
+  /* box-shadow: transparent 10px 10px 10px; */
+  box-shadow: #000000 10px 10px 10px;
+
 
 }
 
@@ -263,6 +329,11 @@ body hr {
   box-shadow: #7e7e7e 10px 10px 10px;
 }
 
+.dark-mode .about {
+  border: 2px solid #343434;
+  box-shadow: #000000 10px 10px 10px;
+}
+
 .a-link {
   color: #ff7e5f;
   transition: color 0.5s ease-in-out;
@@ -280,15 +351,28 @@ body hr {
   padding: 20px;
 }
 
+.dark-mode .col-cards {
+  border: 2px solid #343434;
+  /* box-shadow: transparent 10px 10px 10px; */
+  box-shadow: #000000 10px 10px 10px;
+
+
+}
+
 /* end */
 /* Projects */
 .project-card {
-  /* border-radius: 12px; */
   background-color: #ffffff;
-  border: 2px solid #0d0d0d;
+  border: 2px solid #171717;
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: #7e7e7e 10px 10px 10px;
+}
+
+.dark-mode .project-card {
+  background-color: #343434;
+  box-shadow: #171717 10px 10px 10px;
+  border: 2px solid #343434;
 }
 
 .card-image {
@@ -302,6 +386,13 @@ body hr {
   padding: 20px;
   border: 2px solid #171717;
   box-shadow: #7e7e7e 10px 10px 10px;
+
+}
+
+.dark-mode .slug {
+  padding: 20px;
+  border: 2px solid #343434;
+  box-shadow: #000000 10px 10px 10px;
 }
 
 .slug-image {
@@ -312,15 +403,29 @@ body hr {
   box-shadow: #7e7e7e 10px 10px 10px;
 }
 
+.dark-mode .slug-image {
+  margin: auto;
+  border: 2px solid #343434;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: transparent 10px 10px 10px; */
+  box-shadow: #000000 10px 10px 10px;
+}
+
 .main-detail {
   padding: 15px;
   border: 2px solid #171717;
   box-shadow: #7e7e7e 10px 10px 10px;
 }
 
+.dark-mode .main-detail {
+  padding: 15px;
+  border: 2px solid #343434;
+  /* box-shadow: transparent 10px 10px 10px; */
+  box-shadow: #000000 10px 10px 10px;
+}
 
 .view {
-  /* background: linear-gradient(90deg, #FFF5CC, #FFE6A7, #FFD6CC, #FFBFC9); */
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -337,7 +442,6 @@ body hr {
 }
 
 .view:hover {
-  /* text-decoration-color: linear-gradient(90deg, #FFF5CC, #FFE6A7, #FFD6CC, #FFBFC9); */
   background: linear-gradient(90deg, #D5A7FF, #c082fa, #6d3e9a);
   background-size: 200% 100%;
   animation: gradientWave 5s ease infinite;
@@ -351,25 +455,72 @@ body hr {
 
 }
 
+.dark-mode .proj-text {
+  color: white;
+}
+
 /* end */
 /* Contact */
 .contact {
   padding: 20px;
   border: 2px solid #171717;
   box-shadow: #7e7e7e 10px 10px 10px;
+}
 
+.dark-mode .contact {
+  border: 2px solid #343434;
+  box-shadow: transparent 10px 10px 10px;
+}
+
+.contact-field {
+  box-shadow: transparent 10px 10px 10px;
+  border: 2px solid #343434;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
+}
+
+.dark .contact-field {
+  box-shadow: transparent 10px 10px 10px;
+  border: 2px solid #343434;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
+}
+
+.contact-field:hover {
+  box-shadow: #7e7e7e 10px 10px 10px;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
+}
+
+.dark-mode .contact-field:hover {
+  box-shadow: transparent 10px 10px 10px;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
 }
 
 .contact-btn {
   color: #D5A7FF;
-  transition: background-color 1s ease, color 1s ease, outline-color 1s ease;
-  outline: 2px solid #1717177a;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+  border: 2px solid #1717177a;
+  box-shadow: transparent 10px 10px 10px;
+
+}
+
+.dark-mode .contact-btn {
+  color: #D5A7FF;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+  border: 2px solid #343434;
+  box-shadow: transparent 10px 10px 10px;
 }
 
 .contact-btn:hover {
   color: #6d3e9a;
-  transition: background-color 1s ease, color 1s ease, outline-color 1s ease;
-  outline: 2px solid #171717;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  border: 2px solid #171717;
+  box-shadow: #7e7e7e 10px 10px 10px;
+}
+
+.dark-mode .contact-btn {
+  color: #6d3e9a;
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease, box-shadow 1s ease;
+  border: 2px solid #343434;
+  box-shadow: transparent 10px 10px 10px;
 }
 
 /* end */
@@ -432,6 +583,11 @@ body hr {
   text-decoration: none;
 }
 
+.dark-mode .logo {
+  color: #ffffff !important;
+
+}
+
 .logo-2 {
   font-optical-sizing: auto;
   cursor: pointer;
@@ -449,6 +605,10 @@ body hr {
   padding: 1px;
   transition: transform 0.5s ease-in-out, background-color 1s, transform 0.5s ease-in-out;
   transform: rotate(360deg);
+}
+
+.dark-mode .logo-pic {
+  background-color: #ffff;
 }
 
 .logo-pic:hover {
@@ -542,12 +702,30 @@ body hr {
 
 }
 
+.dark-mode .navbar {
+  border: 1px solid transparent;
+  font-family: 'Technor', sans-serif;
+  font-weight: 500;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 1s ease;
+  color: #b7b5b584;
+  border: 2px solid transparent;
+  box-shadow: transparent;
+}
 
 .navbar:hover {
   transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 2s ease;
   color: #040404;
   border: 2px solid #171717;
   box-shadow: #7e7e7e 1px 10px 10px;
+
+}
+
+.dark-mode .navbar:hover {
+  transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 2s ease;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: #343434 1px 10px 10px;
+  box-shadow: transparent 1px 10px 10px;
 
 }
 
@@ -585,6 +763,14 @@ body hr {
   transition: color 0.3s ease-in-out;
 }
 
+.overlay {
+  background-color: white;
+}
+
+.dark-mode .overlay {
+  background-color: #171717;
+}
+
 /* end */
 
 /* footer */
@@ -594,10 +780,23 @@ body hr {
   transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 2s ease;
 }
 
+.dark-mode footer {
+  color: #b7b5b584;
+  border: 2px solid transparent;
+  transition: color 1s ease, border-color 1s ease, background-color 0.3s ease, box-shadow 2s ease;
+
+}
+
 .footer:hover {
   color: #070707;
   transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 1s ease;
   border: 2px solid #070707;
   box-shadow: #7e7e7e 1px 10px 10px;
 
+}
+
+.dark-mode .footer:hover {
+  color: #ffffff;
+  transition: color 1s ease, border-color 2s ease, background-color 0.3s ease, box-shadow 1s ease;
+  border: 2px solid #ffffff;
 }

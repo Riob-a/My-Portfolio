@@ -24,8 +24,8 @@ export default function ProjectCard({ title, imageUrl, description, slug, aosDel
                         className="card-image w-full h-60 object-cover"
                     />
                     <div className="p-4">
-                        <h3 className="text-lg font-bold text-gray-900">/. {title}</h3>
-                        <p className="text-sm text-gray-600">{description}</p>
+                        <h3 className="text-lg font-bold text-gray-900 proj-text">/. {title}</h3>
+                        <p className="text-sm text-gray-600 proj-text">{description}</p>
                     </div>
                 </div>
             </motion.div>

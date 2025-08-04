@@ -43,7 +43,7 @@ export default function Contact() {
     <div>
       <Navbar />
       <section className="contact p-8 mt-8 max-w-xl mx-auto" data-aos="fade-in" data-aos-delay="200">
-        <h2 className="text-2xl font-bold mb-4 animate-fadeInLeft">Get in Touch</h2>
+        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <motion.input
             whileHover={{ scale: 1.05 }}
@@ -53,7 +53,7 @@ export default function Contact() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="border p-2 inline-block w-full animate-fadeInLeftDelay delay-1"
+            className="border contact-field p-2 inline-block w-full"
             required
           />
           <motion.input
@@ -64,7 +64,7 @@ export default function Contact() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="border p-2 inline-block w-full animate-fadeInLeftDelay delay-2"
+            className="border contact-field p-2 inline-block w-full"
             required
           />
           <motion.textarea
@@ -74,15 +74,16 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange}
             placeholder="Your Message"
-            className="border p-2 inline-block w-full animate-fadeInLeftDelay delay-3"
+            className="border contact-field p-2 inline-block w-full "
             rows="5"
             required
           />
           <motion.button
             whileHover={{ scale: 1.05 }}
+            whileTap={{scale: 0.95, y:2}}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             type="submit"
-            className="contact-btn py-2 px-4 animate-fadeInLeftDelay delay-4"
+            className="contact-btn py-2 px-4"
           >
             Send Message
           </motion.button>

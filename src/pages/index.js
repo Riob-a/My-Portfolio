@@ -9,7 +9,6 @@ export default function Home() {
       <Navbar />
       <section>
         <header className="header relative text-center" data-aos="fade-in" >
-          {/* <h1 className="text" data-aos="fade-in" data-aos-delay="800">[Portfolio.]</h1> */}
           <motion.h1
             className="text-8xl font-bold flex justify-center gap-1"
             data-aos="fade-in"
@@ -22,7 +21,7 @@ export default function Home() {
                 animate={{
                   scale: [1, 2, 1],
                   y: [0, 40, 0,],
-                  x: [ 0, 15, 0, -1],
+                  x: [0, 15, 0, -1],
                   color: ["#000000", "#c082fa", "#000000"],
                   scaleX: [0.5, 1.5, 0.5],
                   scaleY: [0.5, 1.5, 0.5],
@@ -42,7 +41,12 @@ export default function Home() {
 
           </motion.h1>
 
-          <p data-aos="fade-in" data-aos-delay="1000">Developer | Designer</p>
+          <p className="mt-6 text-lg sm:text-xl text-gray-300 font-medium"
+            data-aos="fade-in"
+            data-aos-delay="1200"
+          >
+            Developer <span className="text-purple-400">|</span>  Designer
+          </p>
         </header>
       </section>
 
@@ -53,7 +57,7 @@ export default function Home() {
               <b className="logo-2">Welcome.</b>
             </h1>
             <p className="text-base" data-aos="fade-up" data-aos-delay="200">
-              Feel free to explore my work.
+              Feel free to explore.
             </p>
           </div>
           <motion.div

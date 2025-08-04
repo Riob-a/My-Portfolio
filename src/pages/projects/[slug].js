@@ -62,11 +62,11 @@ export default function ProjectDetail() {
 
             <br /><hr /><br />
             <section className='mb-8' >
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-gray-700 proj-text">
                     <b>Description:</b> {project.description}
                 </p>
                 <br />
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-gray-700 proj-text">
                     <b>Details:</b> {project.details}
                 </p>
             </section>
