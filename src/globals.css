@@ -365,8 +365,12 @@ body hr {
   background-color: #ffffff;
   border: 2px solid #171717;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: #7e7e7e 10px 10px 10px;
+}
+.project-card:hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: #7e7e7e 15px 20px 20px;
 }
 
 .dark-mode .project-card {
