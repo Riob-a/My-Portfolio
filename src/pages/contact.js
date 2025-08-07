@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import { FaGithub, FaLinkedin, FaGoogle } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -80,7 +81,7 @@ export default function Contact() {
           />
           <motion.button
             whileHover={{ scale: 1.05 }}
-            whileTap={{scale: 0.95, y:2}}
+            whileTap={{ scale: 0.95, y: 2 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             type="submit"
             className="contact-btn py-2 px-4"
@@ -89,6 +90,29 @@ export default function Contact() {
           </motion.button>
           <p className="text-sm text-gray-600 mt-2">{status}</p>
         </form>
+      </section>
+
+      <section className="contact p-8 mt-8 mb-4 max-w-xl mx-auto" data-aos="fade-in" data-aos-delay="400">
+        <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
+        <p className="flex flex-wrap items-center gap-4">
+          <motion.a href="mailto:riobad74@gmail.com" className="p-link flex items-center gap-1 text-sm" whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <FaGoogle size={14} /> riobad74@gmail.com
+          </motion.a>
+          <span>|</span>
+          <motion.a href="https://github.com/Riob-a" title="Github" className="p-link flex items-center gap-1 text-sm" whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <FaGithub size={14} /> Riob-a
+          </motion.a>
+          <span>|</span>
+          <motion.a href="https://www.linkedin.com/in/derrick-r-ongwae-1530142bb/" title="LinkedIn" className="p-link flex items-center gap-1 text-sm" whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <FaLinkedin size={14} /> Derrick Ongwae
+          </motion.a>
+        </p>
       </section>
     </div>
   )
