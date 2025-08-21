@@ -92,21 +92,24 @@ export default function About() {
 
                     {/* Education Column */}
                     <section className='col-card' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                        <div  >
+                        <div>
                             <h3 className="text-xl font-semibold mb-4">/. Education</h3>
                             <div className="space-y-4 ">
+
                                 <div className="col-cards p-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                                     <p className="font-semibold">| 2024</p>
                                     <p><strong>Moringa</strong></p>
                                     <p>Software Development</p>
                                     <p>Grade: (A - Pass)</p>
                                 </div>
+
                                 <div className="col-cards p-4" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                                     <p className="font-semibold">| 2020 - 2023</p>
                                     <p><strong>Nairobi National Polytechnic</strong></p>
                                     <p>Information Communication Technology</p>
                                     <p>Grade: (Credit)</p>
                                 </div>
+                                
                             </div>
                         </div>
                     </section>

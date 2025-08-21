@@ -35,7 +35,7 @@ export default function ProjectDetail() {
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold">/.{project.title}</h1>
                 <button
-                    className="text-red-500 text-4xl hover:text-red-700 transition duration-300 "
+                    className="text-4xl close"
                     onClick={() => {
                         setAnimationClass('animate-scaleOut');
                         setTimeout(() => router.push('/projects'), 200);
